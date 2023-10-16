@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AccountBalanceView: View {
+    @State private var balance: Double = 1.200
+
     var body: some View {
         HStack {
             Image(systemName: "dollarsign.circle")
@@ -16,16 +18,17 @@ struct AccountBalanceView: View {
                 .foregroundColor(Color.blue)
                 .padding(.leading, 24)
                 .padding(.bottom, 28)
+                Spacer()
 
             Text("Account Balance: ")
                 .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundColor(Color.blue)
-                .padding(.leading, 76)
+                .padding(.leading, 88)
                 .padding(.bottom, 28)
             Spacer()
 
-            Text("R$ 1.000,00")
+            Text(formatCurrencyValue(balance))
                 .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundColor(Color.blue)
@@ -39,6 +42,13 @@ struct AccountBalanceView: View {
                 .frame(width: 380, height: 80)
         )
     }
+}
+
+private func formatCurrencyValue(_ value: Double) -> String {
+    let formatter: NumberFormatter = NumberFormatter()
+    formatter.locale = Locale(identifier: "pt_BR")
+    formatter.numberStyle = .currency
+    return formatter.string(from: NSNumber(value: value)) ?? ""
 }
 
 #Preview {
