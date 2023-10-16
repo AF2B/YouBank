@@ -19,6 +19,7 @@ struct TitleView: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.blue)
         }
+        .padding(.trailing, 24)
     }
 }
 

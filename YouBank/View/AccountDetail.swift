@@ -18,8 +18,6 @@ struct AccountDetail: View {
                     .padding(.trailing, 55)
                 
                 TitleView()
-                
-                .padding(.trailing, 24)
 
                 Image(systemName: "bell")
                     .resizable()
