@@ -10,12 +10,20 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            HStack {
+                Image(systemName: "banknote")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+                    .foregroundColor(Color.blue)
+                Text("YouBank")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.blue)
+            }
         }
-        .padding()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.blue.opacity(0.1))
+        
     }
 }
 
