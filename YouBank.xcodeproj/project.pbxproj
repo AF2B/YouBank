@@ -11,6 +11,8 @@
 		02CD24392ADCBFC8006666A2 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD24382ADCBFC8006666A2 /* TitleView.swift */; };
 		02CD243B2ADCC05F006666A2 /* AccountBalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD243A2ADCC05E006666A2 /* AccountBalanceView.swift */; };
 		02CD243D2ADCC143006666A2 /* AddMoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD243C2ADCC143006666A2 /* AddMoneyView.swift */; };
+		02CD243F2ADCC7BA006666A2 /* AccountBalanceViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD243E2ADCC7BA006666A2 /* AccountBalanceViewViewModel.swift */; };
+		02CD24422ADCC916006666A2 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CD24412ADCC916006666A2 /* AccountModel.swift */; };
 		02FB26882ADC9A8C001A6F91 /* YouBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB26872ADC9A8C001A6F91 /* YouBankApp.swift */; };
 		02FB268A2ADC9A8C001A6F91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FB26892ADC9A8C001A6F91 /* ContentView.swift */; };
 		02FB268C2ADC9A8D001A6F91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02FB268B2ADC9A8D001A6F91 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		02CD24382ADCBFC8006666A2 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		02CD243A2ADCC05E006666A2 /* AccountBalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceView.swift; sourceTree = "<group>"; };
 		02CD243C2ADCC143006666A2 /* AddMoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMoneyView.swift; sourceTree = "<group>"; };
+		02CD243E2ADCC7BA006666A2 /* AccountBalanceViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceViewViewModel.swift; sourceTree = "<group>"; };
+		02CD24412ADCC916006666A2 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		02FB26842ADC9A8C001A6F91 /* YouBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FB26872ADC9A8C001A6F91 /* YouBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouBankApp.swift; sourceTree = "<group>"; };
 		02FB26892ADC9A8C001A6F91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02CD24402ADCC90B006666A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02CD24412ADCC916006666A2 /* AccountModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		02FB267B2ADC9A8C001A6F91 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +75,7 @@
 		02FB26862ADC9A8C001A6F91 /* YouBank */ = {
 			isa = PBXGroup;
 			children = (
+				02CD24402ADCC90B006666A2 /* Model */,
 				02FB26982ADC9B4F001A6F91 /* View */,
 				02FB26952ADC9AEE001A6F91 /* ViewModel */,
 				02FB26872ADC9A8C001A6F91 /* YouBankApp.swift */,
@@ -85,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				02FB26962ADC9B0C001A6F91 /* AccountListViewModel.swift */,
+				02CD243E2ADCC7BA006666A2 /* AccountBalanceViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -171,10 +185,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CD243F2ADCC7BA006666A2 /* AccountBalanceViewViewModel.swift in Sources */,
 				02FB268A2ADC9A8C001A6F91 /* ContentView.swift in Sources */,
 				02CD243D2ADCC143006666A2 /* AddMoneyView.swift in Sources */,
 				02FB26972ADC9B0C001A6F91 /* AccountListViewModel.swift in Sources */,
 				02FB269A2ADC9C8A001A6F91 /* AccountDetail.swift in Sources */,
+				02CD24422ADCC916006666A2 /* AccountModel.swift in Sources */,
 				02CD24372ADCBC7B006666A2 /* RoundedRectangleIconView.swift in Sources */,
 				02FB26882ADC9A8C001A6F91 /* YouBankApp.swift in Sources */,
 				02CD24392ADCBFC8006666A2 /* TitleView.swift in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AccountBalanceView: View {
-    @State private var balance: Double = 1.200
+    @ObservedObject var viewModel: AccountBalanceViewViewModel = AccountBalanceViewViewModel()
 
     var body: some View {
         HStack {
@@ -28,7 +28,7 @@ struct AccountBalanceView: View {
                 .padding(.bottom, 28)
             Spacer()
 
-            Text(formatCurrencyValue(balance))
+            Text(viewModel.formatCurrencyValue())
                 .font(.subheadline)
                 .fontWeight(.bold)
                 .foregroundColor(Color.blue)
@@ -42,13 +42,6 @@ struct AccountBalanceView: View {
                 .frame(width: 380, height: 80)
         )
     }
-}
-
-private func formatCurrencyValue(_ value: Double) -> String {
-    let formatter: NumberFormatter = NumberFormatter()
-    formatter.locale = Locale(identifier: "pt_BR")
-    formatter.numberStyle = .currency
-    return formatter.string(from: NSNumber(value: value)) ?? ""
 }
 
 #Preview {
