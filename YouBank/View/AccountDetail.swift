@@ -52,7 +52,7 @@ struct AccountDetail: View {
                     .font(.subheadline)
                     .fontWeight(.bold)
                     .foregroundColor(Color.blue)
-                    .padding(.leading, 134)
+                    .padding(.leading, 76)
                     .padding(.bottom, 28)
                 Spacer()
 
@@ -104,69 +104,13 @@ struct AccountDetail: View {
             }
 
             HStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.blue.opacity(0.1))
-                    .frame(width: 180, height: 180)
-                    .overlay(
-                        VStack {
-                            Image(systemName: "banknote")
-                                .resizable()
-                                .frame(width: 34, height: 34)
-                                .foregroundColor(Color.blue)
-                            Text("Transfer")
-                                .font(.subheadline)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.blue)
-                        }
-                    )
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.blue.opacity(0.1))
-                    .frame(width: 180, height: 180)
-                    .overlay(
-                        VStack {
-                            Image(systemName: "arrow.down.doc")
-                                .resizable()
-                                .frame(width: 34, height: 34)
-                                .foregroundColor(Color.blue)
-                            Text("Receive")
-                                .font(.subheadline)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.blue)
-                        }
-                    )
+                RoundedRectangleIconView(systemName: "banknote", title: "Transfer")
+                RoundedRectangleIconView(systemName: "arrow.down.doc", title: "Receive")
             }
 
             HStack {
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.blue.opacity(0.1))
-                    .frame(width: 180, height: 180)
-                    .overlay(
-                        VStack {
-                            Image(systemName: "creditcard")
-                                .resizable()
-                                .frame(width: 34, height: 34)
-                                .foregroundColor(Color.blue)
-                            Text("Credit Card")
-                                .font(.subheadline)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.blue)
-                        }
-                    )
-                RoundedRectangle(cornerRadius: 20)
-                    .fill(Color.blue.opacity(0.1))
-                    .frame(width: 180, height: 180)
-                    .overlay(
-                        VStack {
-                            Image(systemName: "arrow.up.right.square")
-                                .resizable()
-                                .frame(width: 34, height: 34)
-                                .foregroundColor(Color.blue)
-                            Text("Investment")
-                                .font(.subheadline)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.blue)
-                        }
-                    )
+                RoundedRectangleIconView(systemName: "dollarsign.circle", title: "Payment")
+                RoundedRectangleIconView(systemName: "arrow.up.circle", title: "Investment")
             }
             Spacer()
         }
