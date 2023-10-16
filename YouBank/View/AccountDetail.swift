@@ -17,16 +17,8 @@ struct AccountDetail: View {
                     .foregroundColor(Color.blue)
                     .padding(.trailing, 55)
                 
-                VStack {
-                    Text("Welcome to")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
-                    Text("YouBank")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.blue)
-                }
+                TitleView()
+                
                 .padding(.trailing, 24)
 
                 Image(systemName: "bell")
